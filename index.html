@@ -2,13 +2,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Переводы KZ ⇄ РФ</title>
+  <title>Переводы из Казахстана в Россию</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #e6f4f9;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      color: #222;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,10 +20,11 @@
     h1 {
       font-size: 2.5rem;
       margin: 0;
+      color: #004080;
     }
     h2 {
-      font-style: italic;
-      font-weight: normal;
+      font-style: normal;
+      font-weight: 300;
       color: #555;
       margin-top: 10px;
     }
@@ -40,21 +41,27 @@
       padding: 12px 24px;
       margin: 10px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 1rem;
       text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #005f87;
     }
     .section {
-      max-width: 600px;
+      max-width: 700px;
       padding: 20px;
+      text-align: left;
     }
     .section h3 {
       margin-bottom: 10px;
+      color: #004080;
     }
     #kurs {
       font-weight: bold;
       font-size: 1.2rem;
-      background: #d9f3ff;
+      background: #e0f3ff;
       padding: 10px 20px;
       border-radius: 10px;
       margin: 20px auto;
@@ -64,43 +71,50 @@
       padding: 20px;
       font-size: 0.9rem;
       color: #666;
+      border-top: 1px solid #ccc;
     }
   </style>
   <script>
     function updateKurs() {
-      const base = prompt("Введите текущий курс рубля к тенге из МиГ:");
+      const base = prompt("Введите текущий курс рубля к тенге (например, 5.00):");
       if (!base || isNaN(base)) return;
       const percent = 1.3 / 100;
       const final = (parseFloat(base) * (1 + percent)).toFixed(4);
-      document.getElementById("kurs").innerText = `Текущий курс: 1 ₽ = ${final} ₸ (с надбавкой 1.3%)`;
+      document.getElementById("kurs").innerText = `Актуальный курс: 1 ₽ = ${final} ₸ (с наценкой 1.3%)`;
     }
   </script>
 </head>
 <body>
   <header>
-    <div class="flags">
-      🇰🇿
-    </div>
-    <h1>ПЕРЕВОДЫ KZ ⇄ РФ</h1>
-    <h2>Нужно перекинуть бабки? Сделаем за 5 минут.</h2>
+    <div class="flags">🇰🇿 🇷🇺</div>
+    <h1>Переводы из Казахстана в Россию</h1>
+    <h2>Надёжный и удобный способ перевести деньги</h2>
   </header>  <div class="buttons">
-    <a href="https://t.me/say_mar" class="button">📲 Telegram</a>
-    <a href="https://wa.me/77001413973" class="button">💬 WhatsApp</a>
-  </div>  <div id="kurs">Текущий курс: нажмите кнопку ниже, чтобы обновить</div>
-  <button class="button" onclick="updateKurs()">🔄 Обновить курс</button>  <div class="section">
-    <h3>Почему мы?</h3>
-    <p>⚡ Быстро — 5–10 минут<br>💰 Выгодный курс<br>🔒 Ручная проверка — надёжность</p>
-  </div>
-  <div class="section">
-    <h3>Как это работает?</h3>
-    <p>1. Вы пишете нам<br>2. Отправляете тенге<br>3. Получаете рубли на карту</p>
-  </div>
-  <div class="section">
-    <h3>Отзывы</h3>
-    <p>«Быстро и без сюрпризов.» — Айгуль, Актобе<br>«Работают, как обещали.» — Дима, Омск</p>
-  </div>
-  <footer>
-    Мы не банк. Просто ребята, которым важно, чтобы всё работало — и вы оставались довольны.
+    <a href="https://t.me/say_mar" class="button">Связаться в Telegram</a>
+    <a href="https://wa.me/77001413973" class="button">Написать в WhatsApp</a>
+  </div>  <div id="kurs">Нажмите кнопку ниже, чтобы обновить курс</div>
+  <button class="button" onclick="updateKurs()">Обновить курс</button>  <div class="section">
+    <h3>Почему выбирают нас:</h3>
+    <ul>
+      <li>⏱ Быстро: перевод занимает 5–10 минут</li>
+      <li>💸 Выгодный курс с минимальной наценкой</li>
+      <li>🔒 Надёжно: ручная проверка каждой заявки</li>
+    </ul>
+  </div>  <div class="section">
+    <h3>Как это работает:</h3>
+    <ol>
+      <li>Вы связываетесь с нами через Telegram или WhatsApp</li>
+      <li>Отправляете сумму в тенге</li>
+      <li>Мы переводим рубли на российскую карту</li>
+    </ol>
+  </div>  <div class="section">
+    <h3>Отзывы клиентов:</h3>
+    <p>«Отличный сервис — всё прошло быстро и без проблем!» — Айгуль, Астана</p>
+    <p>«Спасибо! Деньги пришли в течение 7 минут.» — Дмитрий, Омск</p>
+  </div>  <footer>
+    Мы предлагаем простой, честный и удобный способ перевести деньги из Казахстана в Россию.
+    <br />
+    Свяжитесь с нами — и мы поможем вам быстро и безопасно осуществить перевод.
   </footer>
 </body>
 </html>
